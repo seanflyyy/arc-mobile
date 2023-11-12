@@ -1,0 +1,50 @@
+{
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "run android simulator",
+          "commands": [
+            "cd frontend && npx react-native run-android"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "iPhone 14 simulator",
+          "commands": [
+            "cd frontend && npx react-native run-ios --simulator='iPhone 14'"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "git",
+          "commands": []
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "metro",
+          "commands": [
+            "cd frontend && npx react-native start"
+          ]
+        },
+        {
+          "name": "node",
+          "commands": [
+            "cd backend && nodemon app.js"
+          ]
+        }
+      ]
+    }
+  ],
+}
