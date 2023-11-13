@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import * as React from 'react';
 import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
@@ -5,18 +6,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import OperatingScreen from './operating';
 import ReserveScreen from './reserve';
 import TreasuryScreen from './treasury';
-import OperatingLogo from '../assets/icons/operating-logo';
-import ReserveLogo from '../assets/icons/reserve-logo';
-import TreasuryLogo from '../assets/icons/treasury-logo';
+import OperatingIcon from '../assets/icons/operating-logo';
+import ReserveIcon from '../assets/icons/reserve-logo';
+import TreasuryIcon from '../assets/icons/treasury-logo';
 import HomeIcon from '../assets/icons/home-icon';
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+import HomeScreen from './home';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,20 +18,25 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         screenOptions={({route, navigation}) => ({
           tabBarIcon: ({focused, color, size}) => {
             switch (route.name) {
               // console.log(focused, color, size);
               case 'Home':
-                return <HomeIcon />;
+                return <HomeIcon color={focused ? 'black' : '#6E6E6E'} />;
               case 'Operating':
-                return <OperatingLogo />;
+                return <OperatingIcon color={focused ? 'black' : '#6E6E6E'} />;
               case 'Reserve':
-                return <ReserveLogo />;
+                return <ReserveIcon color={focused ? 'black' : '#6E6E6E'} />;
               case 'Treasury':
-                return <TreasuryLogo />;
+                return <TreasuryIcon color={focused ? 'black' : '#6E6E6E'} />;
             }
           },
+          tabBarLabel: () => {
+            return null;
+          },
+          // title: () => null,
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Operating" component={OperatingScreen} />
