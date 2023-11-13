@@ -1,6 +1,4 @@
 {
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
   "restoreTerminals.terminals": [
     {
       "splitTerminals": [
@@ -15,9 +13,19 @@
     {
       "splitTerminals": [
         {
-          "name": "iPhone 14 simulator",
+          "name": "iPhone 15 Pro simulator",
           "commands": [
-            "cd frontend && npx react-native run-ios --simulator='iPhone 14'"
+            "cd frontend && npx react-native run-ios --simulator='iPhone 15 Pro'"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "iPhone 15 simulator",
+          "commands": [
+            "cd frontend && npx react-native run-ios --simulator='iPhone 15'"
           ]
         }
       ]
@@ -47,4 +55,6 @@
       ]
     }
   ],
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 }
