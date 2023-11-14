@@ -24,14 +24,14 @@ const AssetsContainer = () => {
         interestEarned={'5.45'}
         amountOfAssets={'$11,020,469.30'}
       />
-      <Line color={GRAY_LIGHT} width={1} marginVertical={PADDING / 1.25} />
+      <Line color={GRAY_LIGHT} width={1} marginVertical={PADDING} />
       <AssetsRow
         icon={<OperatingIcon color={'white'} />}
         asset={'Operating'}
         bank={'Evolve Bank *2345'}
         amountOfAssets={'$215,844.57'}
       />
-      <Line color={GRAY_LIGHT} width={1} marginVertical={PADDING / 1.25} />
+      <Line color={GRAY_LIGHT} width={1} marginVertical={PADDING} />
       <AssetsRow
         icon={<ReserveIcon color={'white'} />}
         asset={'Reserve'}
@@ -73,7 +73,7 @@ const AssetsRow = ({
     if (asset === 'Reserve') {
       return 6;
     } else {
-      return 4;
+      return 5;
     }
   };
 
@@ -102,7 +102,7 @@ const AssetsRow = ({
         </Text>
         {interestEarned && (
           <Text adjustsFontSizeToFit={true} style={styles.interestRate}>
-            Earns {interestEarned}% net APY
+            + {interestEarned}%
           </Text>
         )}
       </View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     borderColor: GRAY_LIGHT,
     borderRadius: 4,
     borderWidth: 1,
-    padding: PADDING / 1.25,
+    padding: PADDING,
   },
   row: {
     flexDirection: 'row',
@@ -131,7 +131,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 4,
     marginRight: 10,
   },
   asset: {

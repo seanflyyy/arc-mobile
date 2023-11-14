@@ -1,25 +1,16 @@
 import React from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
-import AssetsBar from '../../components/molecules/bar/assetsBar';
+import {StyleSheet, ScrollView} from 'react-native';
 import {PADDING} from '../../constants';
 import AssetsContainer from '../../components/molecules/container/assetsContainer';
+import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
+import HomeAssetsBar from '../../components/molecules/bar/homeBar';
 
 export default function HomeScreen() {
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.welcome}>Welcome, Miles</Text>
-      <Text style={styles.assetsContainer}>
-        <Text adjustsFontSizeToFit={true} style={styles.assets}>
-          Your total assets are{' '}
-        </Text>
-        <Text adjustsFontSizeToFit={true} style={styles.amount}>
-          $12,301,614
-        </Text>
-      </Text>
-      <AssetsBar treasuryPercent={89} operatingPercent={2} reservePercent={9} />
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <HomeAssetsBar />
       <AssetsContainer />
-      {/* <AssetsBar progress={80} /> */}
-      <Text>Recent transcations</Text>
+      <TransactionHistory />
     </ScrollView>
   );
 }
@@ -30,20 +21,7 @@ const styles = StyleSheet.create({
     padding: PADDING,
     flex: 1,
   },
-  welcome: {
-    fontWeight: '400',
-    paddingBottom: 8,
-    fontSize: 13,
-  },
-  assetsContainer: {
-    paddingBottom: 20,
-  },
-  assets: {
-    fontWeight: '400',
-    fontSize: 22,
-  },
-  amount: {
-    fontWeight: '600',
-    fontSize: 22,
+  transactionHistory: {
+    paddingVertical: PADDING / 2,
   },
 });

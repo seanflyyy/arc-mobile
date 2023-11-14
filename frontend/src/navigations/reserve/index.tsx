@@ -1,19 +1,21 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import ChartWithInformation from '../../components/molecules/chart/chartWithInformation';
 import {PADDING} from '../../constants';
+import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
 
 export default function ReserveScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <ChartWithInformation
-        balance={'$4,821,882'}
+        balance={'$4,821,882.94'}
         routingNumber={'082472413'}
         accountNumber={'0824728228'}
         chartLabels={['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']}
         chartData={[10, 20, 28, 34, 43, 48, 53]}
       />
-    </View>
+      <TransactionHistory />
+    </ScrollView>
   );
 }
 

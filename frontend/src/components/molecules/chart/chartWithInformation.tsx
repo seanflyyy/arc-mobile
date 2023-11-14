@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import CustomLineChart from '../../atoms/lineChart';
 import {GRAY_LIGHT, GRAY_MEDIUM, PADDING} from '../../../constants';
+import TextContainer from '../../atoms/container/textContainer';
 
 const ChartWithInformation = ({
   balance,
@@ -18,21 +19,20 @@ const ChartWithInformation = ({
 }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Balance</Text>
-      <Text style={styles.amount}>{balance}</Text>
-
-      {/* <View style={{left: -50, backgroundColor: 'purple'}}> */}
+      <TextContainer
+        title={'Balance number'}
+        description={balance}
+        descriptionFontSize={26}
+      />
       <View style={styles.chart}>
         <CustomLineChart chartLabels={chartLabels} chartData={chartData} />
       </View>
       <View style={styles.row}>
         <View style={styles.bankNumberRow}>
-          <Text style={styles.title}>Routing number</Text>
-          <Text style={styles.bankNumber}>{routingNumber}</Text>
+          <TextContainer title={'Routing number'} description={routingNumber} />
         </View>
         <View style={styles.bankNumberRow}>
-          <Text style={styles.title}>Account number</Text>
-          <Text style={styles.bankNumber}>{accountNumber}</Text>
+          <TextContainer title={'Account number'} description={accountNumber} />
         </View>
       </View>
     </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   chart: {
-    paddingBottom: 6,
+    paddingVertical: 6,
   },
   row: {
     flexDirection: 'row',

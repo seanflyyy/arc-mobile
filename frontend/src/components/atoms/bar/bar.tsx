@@ -10,37 +10,72 @@ const AssetsBar = ({
   treasuryPercent,
   operatingPercent,
   reservePercent,
+  treasury = 'Treasury',
+  operating = 'Operating',
+  reserve = 'Reserve',
+  treasuryColor = TREASURY_BACKGROUND_COLOR,
+  operatingColor = OPERATING_BACKGROUND_COLOR,
+  reserveColor = RESERVE_BACKGROUND_COLOR,
+  isShowLegend = true,
 }: {
   treasuryPercent: number;
   operatingPercent: number;
   reservePercent: number;
+  treasury?: string;
+  operating?: string;
+  reserve?: string;
+  treasuryColor?: string;
+  operatingColor?: string;
+  reserveColor?: string;
+  isShowLegend?: boolean;
 }) => {
   return (
     <View style={styles.bigContainer}>
       <View style={styles.container}>
-        <View style={[styles.treasury, {width: `${treasuryPercent - 0.5}%`}]} />
         <View
-          style={[styles.operating, {width: `${operatingPercent - 0.5}%`}]}
+          style={[
+            styles.treasury,
+            {
+              width: `${treasuryPercent - 0.5}%`,
+              backgroundColor: treasuryColor,
+            },
+          ]}
         />
-        <View style={[styles.reserve, {width: `${reservePercent - 0.5}%`}]} />
+        <View
+          style={[
+            styles.operating,
+            {
+              width: `${operatingPercent - 0.5}%`,
+              backgroundColor: operatingColor,
+            },
+          ]}
+        />
+        <View
+          style={[
+            styles.reserve,
+            {width: `${reservePercent - 0.5}%`, backgroundColor: reserveColor},
+          ]}
+        />
       </View>
-      <View style={styles.row}>
-        <Assets
-          percent={treasuryPercent}
-          asset="Treasury"
-          backgroundColor="#BA8549"
-        />
-        <Assets
-          percent={operatingPercent}
-          asset="Operating"
-          backgroundColor="#00756E"
-        />
-        <Assets
-          percent={reservePercent}
-          asset="Reserve"
-          backgroundColor="#00A99D"
-        />
-      </View>
+      {isShowLegend && (
+        <View style={styles.row}>
+          <Assets
+            percent={treasuryPercent}
+            asset={treasury}
+            backgroundColor={treasuryColor}
+          />
+          <Assets
+            percent={operatingPercent}
+            asset={operating}
+            backgroundColor={operatingColor}
+          />
+          <Assets
+            percent={reservePercent}
+            asset={reserve}
+            backgroundColor={reserveColor}
+          />
+        </View>
+      )}
     </View>
   );
 };
@@ -81,17 +116,14 @@ const styles = StyleSheet.create({
   treasury: {
     height: '100%',
     borderRadius: 3,
-    backgroundColor: TREASURY_BACKGROUND_COLOR,
   },
   operating: {
     height: '100%',
     borderRadius: 3,
-    backgroundColor: OPERATING_BACKGROUND_COLOR,
   },
   reserve: {
     height: '100%',
     borderRadius: 3,
-    backgroundColor: RESERVE_BACKGROUND_COLOR,
   },
   assetsIndicator: {
     height: 12,
