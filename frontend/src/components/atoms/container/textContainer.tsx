@@ -1,17 +1,19 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 
 const TextContainer = ({
   title,
   description,
   descriptionFontSize = 18,
+  style,
 }: {
   title: string;
   description: string;
   descriptionFontSize?: number;
+  style?: StyleProp<ViewStyle>;
 }) => {
   return (
-    <View>
+    <View style={style}>
       <Text style={styles.title}>{title}</Text>
       <Text style={[styles.description, {fontSize: descriptionFontSize}]}>
         {description}

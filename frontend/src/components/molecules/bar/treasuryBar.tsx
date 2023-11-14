@@ -2,7 +2,12 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Bar from '../../atoms/bar/bar';
 import TextContainer from '../../atoms/container/textContainer';
-import {PADDING} from '../../../constants';
+import {
+  ASSETS_COLOR,
+  CASH_IN_SWEEP_COLOR,
+  INVESTMENTS_COLOR,
+  PADDING,
+} from '../../../constants';
 
 const TreasuryBar = ({
   totalAssets,
@@ -52,7 +57,10 @@ const TreasuryBar = ({
       </View>
       <View style={styles.row}>
         <View style={{flex: 1}}>
-          <TextContainer title="Total assets" description={totalInvestments} />
+          <TextContainer
+            title="Total investments"
+            description={totalInvestments}
+          />
         </View>
         <View style={{flex: 1}}>
           <TextContainer
@@ -65,9 +73,9 @@ const TreasuryBar = ({
         treasuryPercent={convertToPercent(totalAssets)}
         operatingPercent={convertToPercent(totalCashInSweep)}
         reservePercent={convertToPercent(totalInvestments)}
-        treasuryColor={'#C89A64'}
-        operatingColor={'#B07F43'}
-        reserveColor={'#76552C'}
+        treasuryColor={ASSETS_COLOR}
+        operatingColor={CASH_IN_SWEEP_COLOR}
+        reserveColor={INVESTMENTS_COLOR}
         isShowLegend={true}
         treasury={'Assets'}
         operating={'Cash'}
@@ -80,7 +88,7 @@ const TreasuryBar = ({
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    paddingBottom: PADDING / 2,
+    paddingBottom: PADDING,
   },
 });
 
