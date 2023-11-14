@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {BORDER_RADIUS_5, GRAY_LIGHT, PADDING} from '../../../constants';
+import {BORDER_RADIUS_5, PADDING} from '../../../constants';
 
 const TextButton = ({text}: {text: string}) => {
   return (
@@ -12,7 +12,7 @@ const TextButton = ({text}: {text: string}) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: PADDING / 2,
+    paddingVertical: PADDING / 1.8,
     width: '100%',
     borderRadius: BORDER_RADIUS_5,
     borderWidth: 1,
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
+    fontSize: 12,
     fontWeight: 'bold',
   },
 });

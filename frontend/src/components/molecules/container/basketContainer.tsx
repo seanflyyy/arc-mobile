@@ -1,6 +1,11 @@
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
-import {GRAY_LIGHT, GRAY_MEDIUM, PADDING} from '../../../constants';
+import {
+  BORDER_RADIUS_5,
+  GRAY_LIGHT,
+  GRAY_MEDIUM,
+  PADDING,
+} from '../../../constants';
 import TextContainer from '../../atoms/container/textContainer';
 const Basket = ({
   basket,
@@ -80,7 +85,9 @@ const styles = StyleSheet.create({
   iconContainer: {
     borderRadius: 30,
     borderWidth: 1,
-    padding: 10,
+    paddingLeft: 10,
+    paddingVertical: 10,
+    paddingRight: 8,
     marginRight: 10,
     borderColor: GRAY_LIGHT,
   },

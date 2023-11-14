@@ -6,6 +6,7 @@ import Basket from '../../components/molecules/container/basketContainer';
 import AmericaIcon from '../../assets/icons/america.png';
 import DreyfusIcon from '../../assets/icons/dreyfus.png';
 import VanguardIcon from '../../assets/icons/vanguard.png';
+import Padding from '../../components/atoms/style/Padding';
 
 export default function TreasuryScreen() {
   return (
@@ -52,6 +53,8 @@ export default function TreasuryScreen() {
         indicatorColor={INVESTMENTS_COLOR}
         icon={AmericaIcon}
       />
+      <Padding />
+      <Padding />
     </ScrollView>
   );
 }

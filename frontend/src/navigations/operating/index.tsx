@@ -4,6 +4,7 @@ import {PADDING} from '../../constants';
 import ChartWithInformation from '../../components/molecules/chart/chartWithInformation';
 import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
 import Cards from '../../components/molecules/container/cards';
+import Padding from '../../components/atoms/style/Padding';
 
 export default function OperatingScreen() {
   return (
@@ -17,6 +18,8 @@ export default function OperatingScreen() {
       />
       <Cards />
       <TransactionHistory />
+      <Padding />
+      <Padding />
     </ScrollView>
   );
 }

@@ -4,6 +4,7 @@ import {PADDING} from '../../constants';
 import AssetsContainer from '../../components/molecules/container/assetsContainer';
 import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
 import HomeAssetsBar from '../../components/molecules/bar/homeBar';
+import Padding from '../../components/atoms/style/Padding';
 
 export default function HomeScreen() {
   return (
@@ -11,6 +12,8 @@ export default function HomeScreen() {
       <HomeAssetsBar />
       <AssetsContainer />
       <TransactionHistory />
+      <Padding />
+      <Padding />
     </ScrollView>
   );
 }

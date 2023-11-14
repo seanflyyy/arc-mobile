@@ -4,6 +4,7 @@ import ChartWithInformation from '../../components/molecules/chart/chartWithInfo
 import {PADDING} from '../../constants';
 import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
 import YieldSummary from '../../components/molecules/chart/barChartYield';
+import Padding from '../../components/atoms/style/Padding';
 
 export default function ReserveScreen() {
   return (
@@ -17,6 +18,8 @@ export default function ReserveScreen() {
       />
       <YieldSummary />
       <TransactionHistory />
+      <Padding />
+      <Padding />
     </ScrollView>
   );
 }

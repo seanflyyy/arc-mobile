@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TreasuryIcon from '../../../assets/icons/treasury-logo';
 import {
+  BORDER_RADIUS_5,
   GRAY_LIGHT,
   GRAY_MEDIUM,
   INTEREST_RATE_GREEN,

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {BORDER_RADIUS_5, GRAY_LIGHT, PADDING} from '../../../constants';
 import CardIcon from '../../../assets/icons/card-icon';
 import SettingsIcon from '../../../assets/icons/settings-icon';
