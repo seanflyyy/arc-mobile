@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   row: {
-    paddingTop: PADDING * 1.5,
+    paddingTop: PADDING * 1.2,
     flexDirection: 'row',
   },
   half: {

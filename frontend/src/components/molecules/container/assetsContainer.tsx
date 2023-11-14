@@ -72,7 +72,7 @@ const AssetsRow = ({
 
   const getIconPadding = () => {
     if (asset === 'Reserve') {
-      return 6;
+      return 6.5;
     } else {
       return 5;
     }

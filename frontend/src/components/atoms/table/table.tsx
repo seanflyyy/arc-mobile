@@ -6,17 +6,17 @@ import Line from '../line/line';
 const Table = () => {
   const mapContent = () => {
     const content = [
-      ['Today', 'Rippling', '$2,400.12'],
-      ['Yesterday', 'Volume 7', '$24,396.55'],
-      ['Yesterday', 'Volume 7', '$24,396.55'],
-      ['Yesterday', 'Volume 8', '$24,396.55'],
-      ['Yesterday', 'Volume 7', '$24,396.55'],
-      ['Yesterday', 'Volume 8', '$24,396.55'],
-      ['11 Nov 2023', 'Volume 7', '$24,396.55'],
-      ['11 Nov 2023', 'Volume 7', '$24,396.55'],
-      ['11 Nov 2023', 'Volume 8', '$24,396.55'],
-      ['11 Nov 2023', 'Volume 7', '$24,396.55'],
-      ['11 Nov 2023', 'Volume 8', '$24,396.55'],
+      ['Today', 'Acme Corp', '$2,400.12'],
+      ['Yesterday', 'Globex', '$24,396.55'],
+      ['Yesterday', 'Soylent Corp', '$2,500.30'],
+      ['Yesterday', 'Initech', '$9,897.75'],
+      ['Yesterday', 'Vandelay', '$24,100.20'],
+      ['Yesterday', 'Hooli', '$10,950.45'],
+      ['11 Nov 2023', 'Pied Piper', '$23,789.60'],
+      ['11 Nov 2023', 'Stark Industries', '$13,200.85'],
+      ['11 Nov 2023', 'Wayne Enterprises', '$23,650.99'],
+      ['11 Nov 2023', 'Dunder Mifflin', '$40,050.10'],
+      ['11 Nov 2023', 'Bluth Company', '$23,300.20'],
     ];
 
     return content.map((item, index) => {
@@ -70,7 +70,6 @@ const Row = ({
 };
 
 const styles = StyleSheet.create({
-  container: {},
   row: {
     flexDirection: 'row',
   },

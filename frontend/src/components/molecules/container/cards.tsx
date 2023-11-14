@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 180,
-    borderRadius: 20,
+    borderRadius: 25,
     marginBottom: PADDING * 1.75,
   },
 });
