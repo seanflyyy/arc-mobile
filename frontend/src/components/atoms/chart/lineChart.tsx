@@ -1,7 +1,7 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
-import {PADDING} from '../../constants';
+import {PADDING} from '../../../constants';
 
 const chartConfig = {
   backgroundGradientFrom: '#fff',

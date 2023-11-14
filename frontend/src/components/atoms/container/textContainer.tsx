@@ -5,17 +5,23 @@ const TextContainer = ({
   title,
   description,
   descriptionFontSize = 18,
+  descriptionFontWeight,
   style,
 }: {
   title: string;
   description: string;
   descriptionFontSize?: number;
+  descriptionFontWeight?: string;
   style?: StyleProp<ViewStyle>;
 }) => {
   return (
     <View style={style}>
       <Text style={styles.title}>{title}</Text>
-      <Text style={[styles.description, {fontSize: descriptionFontSize}]}>
+      <Text
+        style={[
+          styles.description,
+          {fontSize: descriptionFontSize, fontWeight: descriptionFontWeight},
+        ]}>
         {description}
       </Text>
     </View>

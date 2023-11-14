@@ -1,10 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
-import Table from '../../atoms/table';
+import Table from '../../atoms/table/table';
 import {PADDING} from '../../../constants';
 
 const TransactionHistory = () => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.title}>Recent transactions</Text>
       <Table />
     </View>
@@ -12,9 +12,6 @@ const TransactionHistory = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginVertical: PADDING * 1.2,
-  },
   title: {
     fontWeight: '600',
     fontSize: 16,

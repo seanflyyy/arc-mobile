@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {GRAY_HEAVY, GRAY_LIGHT, PADDING} from '../../constants';
-import Line from './line';
+import {GRAY_HEAVY, GRAY_LIGHT, PADDING} from '../../../constants';
+import Line from '../line/line';
 
 const Table = () => {
   const mapContent = () => {

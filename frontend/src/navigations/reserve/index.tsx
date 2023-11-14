@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import ChartWithInformation from '../../components/molecules/chart/chartWithInformation';
 import {PADDING} from '../../constants';
 import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
+import YieldSummary from '../../components/molecules/chart/barChartYield';
 
 export default function ReserveScreen() {
   return (
@@ -14,6 +15,7 @@ export default function ReserveScreen() {
         chartLabels={['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']}
         chartData={[10, 20, 28, 34, 43, 48, 53]}
       />
+      <YieldSummary />
       <TransactionHistory />
     </ScrollView>
   );

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   container: {
     borderColor: GRAY_LIGHT,
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: BORDER_RADIUS_5,
     padding: PADDING,
   },
   row: {

@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet} from 'react-native';
 import {PADDING} from '../../constants';
 import ChartWithInformation from '../../components/molecules/chart/chartWithInformation';
 import TransactionHistory from '../../components/molecules/transactionHistory/transactionHistory';
+import Cards from '../../components/molecules/container/cards';
 
 export default function OperatingScreen() {
   return (
@@ -14,6 +15,7 @@ export default function OperatingScreen() {
         chartLabels={['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']}
         chartData={[50, 45, 50, 42, 50, 46, 60]}
       />
+      <Cards />
       <TransactionHistory />
     </ScrollView>
   );

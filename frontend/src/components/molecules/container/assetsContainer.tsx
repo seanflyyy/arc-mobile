@@ -12,7 +12,7 @@ import {
 } from '../../../constants';
 import OperatingIcon from '../../../assets/icons/operating-logo';
 import ReserveIcon from '../../../assets/icons/reserve-logo';
-import Line from '../../atoms/line';
+import Line from '../../atoms/line/line';
 
 const AssetsContainer = () => {
   return (
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 1,
     padding: PADDING,
+    marginBottom: PADDING,
   },
   row: {
     flexDirection: 'row',
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     height: 'auto',
   },
   icon: {
-    borderRadius: 5,
+    borderRadius: BORDER_RADIUS_5,
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 10,

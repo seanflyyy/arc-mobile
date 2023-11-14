@@ -25,11 +25,11 @@ export default function App() {
               // console.log(focused, color, size);
               case 'Home':
                 return <HomeIcon color={focused ? 'black' : '#6E6E6E'} />;
-              case 'Operating':
+              case 'Operating Account':
                 return <OperatingIcon color={focused ? 'black' : '#6E6E6E'} />;
-              case 'Reserve':
+              case 'Reserve Account':
                 return <ReserveIcon color={focused ? 'black' : '#6E6E6E'} />;
-              case 'Treasury':
+              case 'Treasury Account':
                 return <TreasuryIcon color={focused ? 'black' : '#6E6E6E'} />;
             }
           },
@@ -39,9 +39,9 @@ export default function App() {
           // title: () => null,
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Operating" component={OperatingScreen} />
-        <Tab.Screen name="Reserve" component={ReserveScreen} />
-        <Tab.Screen name="Treasury" component={TreasuryScreen} />
+        <Tab.Screen name="Operating Account" component={OperatingScreen} />
+        <Tab.Screen name="Reserve Account" component={ReserveScreen} />
+        <Tab.Screen name="Treasury Account" component={TreasuryScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

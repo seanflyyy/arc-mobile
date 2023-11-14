@@ -145,28 +145,3 @@ const styles = StyleSheet.create({
 });
 
 export default AssetsBar;
-
-// import React from 'react';
-// import {View, StyleSheet} from 'react-native';
-
-// const ProgressBar = ({progress}) => {
-//   return (
-//     <View style={styles.container}>
-//       <View style={[styles.filler, {width: `${progress / 2}%`}]} />
-//       <View style={[styles.filler, {width: `${progress / 2}%`}]} />
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-
-//   },
-//   filler: {
-//     height: '100%',
-//     backgroundColor: 'blue',
-//     borderRadius: 5,
-//   },
-// });
-
-// export default ProgressBar;

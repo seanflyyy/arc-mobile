@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import CustomLineChart from '../../atoms/lineChart';
+import CustomLineChart from '../../atoms/chart/lineChart';
 import {GRAY_LIGHT, GRAY_MEDIUM, PADDING} from '../../../constants';
 import TextContainer from '../../atoms/container/textContainer';
 
@@ -20,9 +20,10 @@ const ChartWithInformation = ({
   return (
     <View style={styles.container}>
       <TextContainer
-        title={'Balance number'}
+        title={'Balance'}
         description={balance}
         descriptionFontSize={26}
+        descriptionFontWeight={'bold'}
       />
       <View style={styles.chart}>
         <CustomLineChart chartLabels={chartLabels} chartData={chartData} />
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     padding: PADDING / 1.25,
+    marginBottom: PADDING,
   },
   title: {
     fontWeight: '500',
